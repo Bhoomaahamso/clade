@@ -1,113 +1,107 @@
+import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="">
+      <Navbar />
+      <div className="flex items-center space-x-[72px] pl-24 border border-[#E7E7E7]">
+        <h4 className="relative text-xl font-semibold text-[#DC4A2D] p-5 after:bg-[#DC4A2D] after:left-[20%] after:-bottom-5 after:h-[2px] after:w-16 after:rounded-full after:block after:relative border-[#DC4A2D]">
+          Job preview
+        </h4>
+        <h4 className="text-xl font-medium text-[#888888]">Applicants</h4>
+        <h4 className="text-xl font-medium text-[#888888]">Match</h4>
+        <h4 className="text-xl font-medium text-[#888888]">Messages</h4>
+      </div>
+      <div className="pt-9 pb-8 pl-24">
+        <div>
+          <div className="flex items-center space-x-3 mb-6">
+            <h1 className="text-4xl/[48px] font-semibold text-[#3D3D3D]">
+              Senior Product Designer
+            </h1>
+            <span className="bg-[#D1D1D1] w-1 h-1 rounded-full"></span>
+            <p className="text-[#888888] text-sm font-medium">
+              posted 2 days ago
+            </p>
+            <div className="flex items-center bg-[#ECFDF3] rounded-full border border-[#ABEFC6] w-fit px-2">
+              <span className="bg-[#17B26A] mr-1 w-[6px] h-[6px] rounded-full block"></span>
+              <p className="text-[#067647] text-xs/[18px] font-medium">Open</p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3">
+              <svg
+                width="18"
+                height="20"
+                viewBox="0 0 18 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 12.5C10.6569 12.5 12 11.1569 12 9.5C12 7.84315 10.6569 6.5 9 6.5C7.34315 6.5 6 7.84315 6 9.5C6 11.1569 7.34315 12.5 9 12.5Z"
+                  stroke="#5D5D5D"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9 21.5C13 17.5 17 13.9183 17 9.5C17 5.08172 13.4183 1.5 9 1.5C4.58172 1.5 1 5.08172 1 9.5C1 13.9183 5 17.5 9 21.5Z"
+                  stroke="#5D5D5D"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <p className="text-xl font-medium text-[#5D5D5D]">
+                Delaware, USA
+              </p>
+            </div>
+            <span className="bg-[#D1D1D1] w-1 h-1 rounded-full"></span>
+            <div className="flex items-center space-x-3">
+              <svg
+                width="20"
+                height="18"
+                viewBox="0 0 22 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 3.5C12 4.60457 9.53757 5.5 6.5 5.5C3.46243 5.5 1 4.60457 1 3.5M12 3.5C12 2.39543 9.53757 1.5 6.5 1.5C3.46243 1.5 1 2.39543 1 3.5M12 3.5V5M1 3.5V15.5C1 16.6046 3.46243 17.5 6.5 17.5M6.5 9.5C6.33145 9.5 6.16468 9.49724 6 9.49185C3.19675 9.39999 1 8.54328 1 7.5M6.5 13.5C3.46243 13.5 1 12.6046 1 11.5M21 10C21 11.1046 18.5376 12 15.5 12C12.4624 12 10 11.1046 10 10M21 10C21 8.89543 18.5376 8 15.5 8C12.4624 8 10 8.89543 10 10M21 10V17.5C21 18.6046 18.5376 19.5 15.5 19.5C12.4624 19.5 10 18.6046 10 17.5V10M21 13.75C21 14.8546 18.5376 15.75 15.5 15.75C12.4624 15.75 10 14.8546 10 13.75"
+                  stroke="#5D5D5D"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <p className="text-xl font-medium text-[#5D5D5D]">$300k-$400k</p>
+            </div>
+          </div>
+          <div></div>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <div>
+          <div>
+            <p>Skills Required</p>
+            <div className="">
+              <div className="flex py-1 px-[6px] w-fit rounded-md border border-[#D0D5DD]">
+                <Image src="/Figma.svg" width="16" height={16} alt="Figma" />
+                <p className="ml-1">Figma</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p className="text-sm font-medium text-[#6E6D6D]">Preferred Language</p>
+            <h1 className="text-base font-semibold text-[#3D3D3D]">English</h1>
+          </div>
+          <div>
+            <p className="text-sm font-medium text-[#6E6D6D]">type</p>
+            <h1 className="text-base font-semibold text-[#3D3D3D]">Full time</h1>
+          </div>
+          <div>
+            <p className="text-sm font-medium text-[#6E6D6D]">Years of Experience</p>
+            <h1 className="text-base font-semibold text-[#3D3D3D]">3+ Years of Experience</h1>
+          </div>
+        </div>
+    </div>
   );
 }
